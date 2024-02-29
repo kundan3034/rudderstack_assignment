@@ -23,41 +23,24 @@ class ConnectionsPage extends Page {
      * e.g. to login using username and password
      */
     public async getDestinationForSource(source) {
-        // browser.debug()
-        console.log(typeof this.sources)
         const elements = await browser.$$("#sources-list .sc-fnOeCC.jTmsmv");
-        console.log("printing sources elements.....", elements)
         let targetElement;
         for (const element of elements) {
             const text = await element.getText();
             if (text.includes(source)) {
                 targetElement = element;
-                targetElement.click()
+                await targetElement.click();
                 break;
             }
         }
-
-
-        // if (targetElement) {
-        //     const text = await targetElement.getText();
-        //     console.log(text);
-        //     return text;
-        // } else {
-        //     console.log(`No element containing "${source}" found`);
-        //     return undefined;
-        // }
-
-
-
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        const destinationValueElement = await browser.$('.ant-table-tbody .ant-table-cell .sc-jrkPvW')
+        const value = await destinationValueElement.getText()
+        console.log(value)
+        return value
     }
-    // public async getSourceForDestination(username: string, password: string) {
-    //     await this.inputUsername.setValue(username);
-    //     await this.inputPassword.setValue(password);
-    //     await this.btnSubmit.click();
-    // }
-    /**
-     * overwrite specific options to adapt it to page object
-     */
+
+
 
 }
 

@@ -22,8 +22,9 @@ When(/^I navigate to (\S+) page$/, async (path) => {
 
 
 Then(/^I should see (\S+) exists between (.+) and (.+)$/, async (connection, source, destination) => {
-    console.log(typeof source)
-
-    let expectedDestination = connectionsPage.getDestinationForSource(source)
+    // connectionsPage.getDestinationForSource(source)
+    let expectedDestination = await connectionsPage.getDestinationForSource(source)
+    console.log(expectedDestination)
+    await expect(expectedDestination).toBe(destination);
 
 });
