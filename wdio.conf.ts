@@ -1,4 +1,10 @@
+
 import type { Options } from '@wdio/types'
+import * as dotenv from 'dotenv';
+dotenv.config();
+console.log("random...............................")
+// import { config as dotenvConfig } from 'dotenv';
+// dotenvConfig();
 export const config: Options.Testrunner = {
     //
     // ====================
@@ -134,6 +140,7 @@ export const config: Options.Testrunner = {
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec', 'html-nice'],
 
+
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
@@ -161,6 +168,7 @@ export const config: Options.Testrunner = {
         // <boolean> Enable this config to treat undefined definitions as warnings.
         ignoreUndefinedDefinitions: false
     },
+
 
 
     //
@@ -340,3 +348,4 @@ export const config: Options.Testrunner = {
     // afterAssertion: function(params) {
     // }
 }
+

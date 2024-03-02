@@ -40,6 +40,27 @@ class ConnectionsPage extends Page {
         return value
     }
 
+    // public async getSourceForDestination(destination) {
+    //     const elements = await browser.$$(".sc-jIQHLS .sc-jYSxqJ .hxGvuv .fLYvPg");
+    //     console.log(elements)
+    //     console.log(destination)
+    //     console.log("..................")
+    //     let targetElement;
+    //     for (const element of elements) {
+    //         const text = await element.getText();
+    //         console.log(text)
+    //         if (text.includes(destination)) {
+    //             targetElement = element;
+    //             await targetElement.click();
+    //             break;
+    //         }
+    //     }
+    //     await new Promise(resolve => setTimeout(resolve, 2000));
+    //     const sourceValueElement = await browser.$('.sc-jrkPvW .sc-hbyUnm .gunCQe .grIlGV')
+    //     const value = await sourceValueElement.getText()
+    //     console.log(value)
+    //     return value
+    // }
 
 
 }
