@@ -7,11 +7,11 @@ This repository contains a test automation framework for testing Rudderstack usi
 2. Install dependencies using `npm install`.
 
 ## Running Tests
-- To run tests for the **development** environment, use the command:
+- To run tests for the **dev** environment, use the command: `yarn test:dev`
 
-- To run tests for the **QA** environment, use the command:
+- To run tests for the **QA** environment, use the command: `yarn test:qa`
 
-- To run tests for the **production** environment, use the command:
+- To run tests for the **prod** environment, use the command: `yarn test:prod`
 
 
 ## Configuration
