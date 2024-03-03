@@ -19,8 +19,10 @@ Given(/^I login to rudderstack with credentials for (.+) environment$/, async (e
     // const password = process.env[`PROD_PASSWORD`] as string;
 
 
-    const username = process.env[`${env.toUpperCase()}_USERNAME`] as string;
-    const password = process.env[`${env.toUpperCase()}_PASSWORD`] as string;
+    // const username = process.env[`${env.toUpperCase()}_USERNAME`] as string;
+    // const password = process.env[`${env.toUpperCase()}_PASSWORD`] as string;
+    const username = process.env['USERNAME'] as string
+    const password = process.env['PASSWORD'] as string
     console.log("process env.......", process.env)
     console.log(username, password)
     console.log("***************************")
