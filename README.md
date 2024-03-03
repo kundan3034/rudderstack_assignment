@@ -6,12 +6,13 @@ This repository contains a test automation framework for testing Rudderstack usi
 1. Clone this repository to your local machine.
 2. Install dependencies using `npm install`.
 
-## Running Tests
+## Running Tests: Only prod env works as I don't have other env creds
 - To run tests for the **dev** environment, use the command: `yarn test:dev`
 
 - To run tests for the **QA** environment, use the command: `yarn test:qa`
 
 - To run tests for the **prod** environment, use the command: `yarn test:prod`
+ 
 
 
 ## Configuration
