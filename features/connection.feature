@@ -6,8 +6,9 @@ Feature: The connection between source and destination
     Then I should see connection <exists> between <source> and <destination>
 
     Examples:
-      | source               | destination             | exists         | env |
-      | HTTP dev test source | Webhook dev test        | exists           | prod |
-     
-    
+      | source               | destination      | exists | env  |
+      | HTTP dev test source | Webhook dev test | exists | prod |
+
+
+
 
