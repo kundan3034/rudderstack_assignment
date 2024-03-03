@@ -1,14 +1,8 @@
 import { $ } from '@wdio/globals'
 import Page from './page.js';
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
 
 class ConnectionsPage extends Page {
-    /**
-     * define selectors using getter methods
-     */
     public get sources() {
         return $('#sources-list .sc-fnOeCC.jTmsmv');
     }
@@ -17,11 +11,6 @@ class ConnectionsPage extends Page {
         return $('#destinations-list .sc-fnOeCC');
     }
 
-
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
     public async getDestinationForSource(source) {
         const elements = await browser.$$("#sources-list .sc-fnOeCC.jTmsmv");
         let targetElement;
@@ -39,8 +28,6 @@ class ConnectionsPage extends Page {
         console.log(value)
         return value
     }
-
-
 }
 
 export default new ConnectionsPage();

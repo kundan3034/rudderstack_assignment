@@ -5,9 +5,6 @@ const envFile = `.env.${process.env.NODE_ENV || 'dev'}`;
 console.log("env file path", envFile)
 dotenv.config({ path: envFile });
 
-console.log("random...............................")
-// import { config as dotenvConfig } from 'dotenv';
-// dotenvConfig();
 export const config: Options.Testrunner = {
     //
     // ====================

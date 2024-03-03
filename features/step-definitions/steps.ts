@@ -14,9 +14,6 @@ Given(/^I login to rudderstack with credentials for (.+) environment$/, async (e
 
     const username = process.env['USERNAME'] as string
     const password = process.env['PASSWORD'] as string
-    console.log("process env.......", process.env)
-    console.log(username, password)
-    console.log("***************************")
 
     await LoginPage.open();
     await LoginPage.login(username, password);
